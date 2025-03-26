@@ -2,7 +2,10 @@
 C3 debugging in vscode on Linux and Mac
 
 Manually add the breakpoints at the bottom of the debug window, unfortunately I have not figured out how to do so via the GUI
+it supports adding breakpoints like: `file_name.c3:line_number` for example: `main.c3:5`
 ![image](https://github.com/user-attachments/assets/e393e8c4-9c9b-46c5-81c1-ad51fa80f73b)
+
+
 
 
 ## Linux with GDB
