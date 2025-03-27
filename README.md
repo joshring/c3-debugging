@@ -178,3 +178,9 @@ File content:
     ]
 }
 ```
+
+
+## Debugging on NVIM
+
+plugins/debuggin.lua: https://github.com/BWindey/nvim-config/blob/main/lua/plugins/debugging.lua
+plugins/adapters/lldb.lua: https://github.com/BWindey/nvim-config/blob/main/lua/plugins/adapters/lldb.lua
