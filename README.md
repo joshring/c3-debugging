@@ -139,24 +139,24 @@ File content:
     "version": "0.2.0",
     "configurations": [
         // On ubuntu: sudo apt-get install llvm llvm-18 llvm-18-dev lldb lldb-18 llvm-18-tools
-    		// add to your path /usr/lib/llvm-18/bin/lldb-dap
-    		// I added this to my .bashrc file
-    		// export PATH="/usr/lib/llvm-18/bin:$PATH"
-    		//
-    		// On Mac I believe llvm tools are already installed
-    		{
-    			"name": "lldb dap Debug",
-    			"type": "lldb-dap",
-    			"request": "launch",
-    			"program": "${workspaceFolder}/build/your_project_exe_name",
-    			// "args": [ "one", "two", "three" ],
-    			// "env": {
-    			// 	"FOO": "1"
-    			// 	"BAR": ""
-    			// }
-    			"preLaunchTask": "c3cbuild",
-    			"stopOnEntry": true
-    		}
+        // add to your path /usr/lib/llvm-18/bin/lldb-dap
+        // I added this to my .bashrc file
+        // export PATH="/usr/lib/llvm-18/bin:$PATH"
+        //
+        // On Mac I believe llvm tools are already installed
+        {
+            "name": "lldb dap Debug",
+            "type": "lldb-dap",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/your_project_exe_name",
+            // "args": [ "one", "two", "three" ],
+            // "env": {
+            //    "FOO": "1"
+            //    "BAR": ""
+            // }
+            "preLaunchTask": "c3cbuild",
+            "stopOnEntry": true
+        }
     ]
 }
 ```
