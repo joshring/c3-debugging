@@ -1,4 +1,4 @@
-# c3-vscode-debugging
+# c3-debugging
 C3 debugging in vscode on Linux and Mac
 
 Manually add the breakpoints at the bottom of the debug window, unfortunately I have not figured out how to do so via the GUI
