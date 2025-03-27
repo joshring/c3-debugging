@@ -7,7 +7,7 @@ It supports adding breakpoints like:
 - File and Line based breakpoints: `file_name.c3:line_number` for example: `main.c3:5`
 - Package and function based breakpoints: `package_name.function_name` for example `my_library.example_fn`
 
-<img src="https://github.com/user-attachments/assets/e393e8c4-9c9b-46c5-81c1-ad51fa80f73b" alt="Alt Text" height="500">
+<img src="https://github.com/user-attachments/assets/e393e8c4-9c9b-46c5-81c1-ad51fa80f73b" alt="Alt Text" height="700">
 
 
 
