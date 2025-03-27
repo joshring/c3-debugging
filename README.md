@@ -187,3 +187,56 @@ File content:
 
 - plugins/debuggin.lua: https://github.com/BWindey/nvim-config/blob/main/lua/plugins/debugging.lua
 - plugins/adapters/lldb.lua: https://github.com/BWindey/nvim-config/blob/main/lua/plugins/adapters/lldb.lua
+
+
+## Debugging on Windows
+- VSCode extension used: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
+- Follow the install instructions and run the compiler at least once following these instructions
+- https://code.visualstudio.com/docs/cpp/config-msvc
+
+
+
+### Add the following directories and files
+Add file: `.vscode/launch.json`
+
+File content:
+```json5
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MSVC debugger for C3",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\build\\project_name_here_to_replace.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "c3cbuild",
+        }
+    ]
+}
+```
+
+Add file `.vscode/tasks.json`
+
+File content:
+```json5
+{
+    "version": "2.0.0",
+    "type":"shell",
+    "tasks": [
+        {
+            "type": "shell",
+            "command": "c3c",
+            "args": ["build"],
+            "label": "c3cbuild"
+        }
+    ]
+}
+```
