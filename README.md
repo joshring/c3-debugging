@@ -89,14 +89,14 @@ File content:
             "cwd": "${workspaceFolder}/build",
             "environment": [],
             "MIMode": "gdb",
-			      "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "text": "-enable-pretty-printing",
                 }
             ],
             "preLaunchTask": "c3cbuild",
-			      "stopAtEntry": true,
+            "stopAtEntry": true,
         }
     ]
 }
