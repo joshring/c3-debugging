@@ -196,11 +196,14 @@ File content:
 - plugins/adapters/lldb.lua: https://github.com/BWindey/nvim-config/blob/main/lua/plugins/adapters/lldb.lua
 
 
-## Debugging on Windows
+## Debugging with VSCode on Windows
 - VSCode extension used: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
 - Follow the install instructions and run the compiler at least once following these instructions
 - https://code.visualstudio.com/docs/cpp/config-msvc
 
+> [!IMPORTANT]  
+> Set `File->Preferences->Settings`, set `"debug.allowBreakpointsEverywhere"`
+> This will allow you to set breakpoints graphically
 
 
 ### Add the following directories and files
