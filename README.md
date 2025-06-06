@@ -2,14 +2,23 @@
 
 ## C3 debugging in vscode on Windows, Linux and Mac
 
+> [!IMPORTANT]  
+> Set `File->Preferences->Settings`, set `"debug.allowBreakpointsEverywhere"`
+> This will allow you to set breakpoints graphically
+
+<details>
+	<summary>
+	 	Click here if you prefer to set breakpoints manually
+	</summary>
+
 Manually add the breakpoints at the bottom of the debug window (see bottom left of screenshot), unfortunately I have not figured out how to do so via the side of the editor window
 
 ## Manually adding breakpoints supports: 
 - File and Line based breakpoints: `file_name.c3:line_number` for example: `main.c3:5`
 - Package and function based breakpoints: `package_name.function_name` for example `my_library.example_fn`
 
-<img src="https://github.com/user-attachments/assets/e393e8c4-9c9b-46c5-81c1-ad51fa80f73b" alt="Alt Text" height="700">
-
+<img src="https://github.com/user-attachments/assets/e393e8c4-9c9b-46c5-81c1-ad51fa80f73b" alt="Alt Text" height="700"> 
+</details>
 
 
 
