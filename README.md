@@ -22,83 +22,7 @@ Manually add the breakpoints at the bottom of the debug window (see bottom left 
 
 
 
-
 ## Linux with GDB
-
-### Download VSCode extension for debugging support
-VSCode extension used: https://marketplace.visualstudio.com/items?itemName=webfreak.debug
-
-
-### Add the following directories and files
-Add file: `.vscode/launch.json`
-
-File content:
-```json5
-{
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            // Can get it to stop at entry, but that's it
-            // manually add breakpoints at the bottom of the debug pannel
-            "name": "gdb debug",
-            "type": "gdb",
-            "request": "launch",
-            "target": "${workspaceRoot}/build/your_project_exe_name",
-            "cwd": "${workspaceRoot}",
-            "valuesFormatting": "parseText",
-            "preLaunchTask": "c3cbuild",
-            "stopAtEntry": true,
-        }
-    ]
-}
-```
-
-Add file `.vscode/tasks.json`
-
-File content:
-```json5
-{
-    "version": "2.0.0",
-    "type":"shell",
-    "tasks": [
-        {
-            "type": "shell",
-            "command": "c3c",
-            "args": ["build"],
-            "label": "c3cbuild",
-            "presentation": {
-                "echo": true,
-		"reveal": "never",
-		"focus": false,
-		"panel": "dedicated",
-		"showReuseMessage": false,
-		"clear": false,
-		"revealProblems": "onProblem",
-		"close": true
-            },
-            "problemMatcher": {
-                "owner": "c3c",
-                "fileLocation": [
-                    "relative",
-                    "${workspaceFolder}"
-                ],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+)\\s+(Warning|Error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
-            }
-        }
-    ]
-}
-```
-
 
 ## Linux with GDB and C++ dev tools
 
@@ -181,6 +105,89 @@ File content:
     ]
 }
 ```
+
+
+<details>
+<summary>
+	Some extensions have some problems, click here to see an example
+</summary>
+
+This extension has a problem with the data layout being incorrect
+ 
+### Download VSCode extension for debugging support
+VSCode extension used: https://marketplace.visualstudio.com/items?itemName=webfreak.debug
+
+
+### Add the following directories and files
+Add file: `.vscode/launch.json`
+
+File content:
+```json5
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Can get it to stop at entry, but that's it
+            // manually add breakpoints at the bottom of the debug pannel
+            "name": "gdb debug",
+            "type": "gdb",
+            "request": "launch",
+            "target": "${workspaceRoot}/build/your_project_exe_name",
+            "cwd": "${workspaceRoot}",
+            "valuesFormatting": "parseText",
+            "preLaunchTask": "c3cbuild",
+            "stopAtEntry": true,
+        }
+    ]
+}
+```
+
+Add file `.vscode/tasks.json`
+
+File content:
+```json5
+{
+    "version": "2.0.0",
+    "type":"shell",
+    "tasks": [
+        {
+            "type": "shell",
+            "command": "c3c",
+            "args": ["build"],
+            "label": "c3cbuild",
+            "presentation": {
+                "echo": true,
+		"reveal": "never",
+		"focus": false,
+		"panel": "dedicated",
+		"showReuseMessage": false,
+		"clear": false,
+		"revealProblems": "onProblem",
+		"close": true
+            },
+            "problemMatcher": {
+                "owner": "c3c",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+)\\s+(Warning|Error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        }
+    ]
+}
+```
+</details>
 
 
 ## Linux and possibly MacOS with LLVM using DAP
