@@ -59,7 +59,32 @@ File content:
             "type": "shell",
             "command": "c3c",
             "args": ["build"],
-            "label": "c3cbuild"
+            "label": "c3cbuild",
+			"presentation": {
+				"echo": true,
+				"reveal": "never",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false,
+				"clear": false,
+				"revealProblems": "onProblem",
+				"close": true
+			},
+			"problemMatcher": {
+				"owner": "c3c",
+				"fileLocation": [
+					"relative",
+					"${workspaceFolder}"
+				],
+				"pattern": {
+					"regexp": "^(.*):(\\d+):(\\d+)\\s+(Warning|Error):\\s+(.*)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			}
         }
     ]
 }
@@ -117,7 +142,32 @@ File content:
             "type": "shell",
             "command": "c3c",
             "args": ["build"],
-            "label": "c3cbuild"
+            "label": "c3cbuild",
+			"presentation": {
+				"echo": true,
+				"reveal": "never",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false,
+				"clear": false,
+				"revealProblems": "onProblem",
+				"close": true
+			},
+			"problemMatcher": {
+				"owner": "c3c",
+				"fileLocation": [
+					"relative",
+					"${workspaceFolder}"
+				],
+				"pattern": {
+					"regexp": "^(.*):(\\d+):(\\d+)\\s+(Warning|Error):\\s+(.*)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			}
         }
     ]
 }
@@ -176,7 +226,32 @@ File content:
             "type": "shell",
             "command": "c3c",
             "args": ["build"],
-            "label": "c3cbuild"
+            "label": "c3cbuild",
+			"presentation": {
+				"echo": true,
+				"reveal": "never",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false,
+				"clear": false,
+				"revealProblems": "onProblem",
+				"close": true
+			},
+			"problemMatcher": {
+				"owner": "c3c",
+				"fileLocation": [
+					"relative",
+					"${workspaceFolder}"
+				],
+				"pattern": {
+					"regexp": "^(.*):(\\d+):(\\d+)\\s+(Warning|Error):\\s+(.*)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			}
         }
     ]
 }
@@ -235,7 +310,32 @@ File content:
             "type": "shell",
             "command": "c3c",
             "args": ["build"],
-            "label": "c3cbuild"
+            "label": "c3cbuild",
+			"presentation": {
+				"echo": true,
+				"reveal": "never",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false,
+				"clear": false,
+				"revealProblems": "onProblem",
+				"close": true
+			},
+			"problemMatcher": {
+				"owner": "c3c",
+				"fileLocation": [
+					"relative",
+					"${workspaceFolder}"
+				],
+				"pattern": {
+					"regexp": "^(.*):(\\d+):(\\d+)\\s+(Warning|Error):\\s+(.*)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			}
         }
     ]
 }
