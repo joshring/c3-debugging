@@ -275,3 +275,13 @@ File content:
     ]
 }
 ```
+
+## Clion debugging with C3 with LLVM-dap
+
+- Create a new Run/Debug configuration based on Debug Adapter Protocol, make the command point to your lldb-dap exe, in my case it's just from my local mingw installation
+- Under mappings specify the language and file types (you need the c3intellij plugin installed for this, I think).
+- Under Configuration, specify the working dir and path to the exe, and provide the full DAP parameters to pass on in the form of JSON. You're supposed to be able to use variables here instead of hardcoding the paths, but I couldn't quite get it working so this is good enough for me right now.,
+
+That should be it, I think. It respects my in-editor breakpoints and I can see my locals.
+<img width="1275" height="610" alt="image_lat" src="https://github.com/user-attachments/assets/c17e59da-2a7e-469c-a6cf-9a8a59eea9a3" />
+
